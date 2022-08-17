@@ -33,11 +33,13 @@ public:
 
     const list<TypeFile *> &getTypeFileList() const;
 
-    void printDetails() override;
+    // implement pure virtual from parent
+    void printDetails(ostream &) override;
 
     // extra methods
     // Έλεγχος αν έχει αυτό το μάθημα
     bool hasTypeFile(TypeFile &);
+
     // overloading operator
 };
 

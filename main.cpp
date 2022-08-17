@@ -3,6 +3,7 @@
 #include <string>
 #include "Developer.h"
 #include "AppData.h"
+#include "Game.h"
 
 using namespace std;
 
@@ -14,8 +15,7 @@ int main() {
     return 0;
 }
 
-void exportToFileDevelopers(const string &fileName, const AppData &appData)
-{
+void exportToFileDevelopers(const string &fileName, const AppData &appData) {
     // Δημιουργία stream
     ofstream fileStream;
 
@@ -31,11 +31,31 @@ void exportToFileDevelopers(const string &fileName, const AppData &appData)
     for (Developer *each: appData.getDeveloperList()) {
         each->print(fileStream);
     }
-    
+
     fileStream.close();
 }
 
 // (ayta sth main)
 // γράφει σε κανάλι εξόδου όλα τα χαρακτηριστικά των εφαρμογών ( games & mediaplayer )
-// overloading operator <<
-// ostream &operator<<(ostream &, const list<Course *> &);
+ostream &operator<<(ostream &stream, const AppData &appData) {
+
+    Game *game;
+    MediaPlayer *mediaPlayer;
+
+    for (Application *const &each: appData.getApplicationList()) {
+
+        // print professor
+        game = dynamic_cast<Game *>(each);
+        if (game != nullptr) {
+            game->printDetails(stream);
+        }
+
+        // print student
+        mediaPlayer = dynamic_cast<MediaPlayer *>(each);
+        if (mediaPlayer != nullptr) {
+            mediaPlayer->printDetails(stream);
+        }
+    }
+
+    return stream;
+}

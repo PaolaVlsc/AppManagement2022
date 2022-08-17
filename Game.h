@@ -30,9 +30,11 @@ public:
     const string &getCategory() const;
     bool getIsOnline() const;
 
-    void printDetails() override;
 
     // extra methods
+    // implement pure virtual from parent
+    void printDetails(ostream &) override;
+
     // overloading operator
 };
 

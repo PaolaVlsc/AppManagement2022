@@ -43,8 +43,16 @@ bool Game::getIsOnline() const {
     return isOnline;
 }
 
-// extra methods
-void Game::printDetails() {
 
+// extra methods
+void Game::printDetails(ostream &stream) {
+    stream << "Code: " << getCode() <<
+           "\tTitle: " << getTitle() <<
+           "\tCategory: " << this->category <<
+           "\tOnline: " << this->isOnline <<
+           "\tDeveloper details: " << std::endl <<
+           "Code: " << getDeveloper()->getCode() <<
+           "\tName: " << getDeveloper()->getName() <<
+           "\tEmail: " << getDeveloper()->getEmail() << std::endl;
 }
 // overloading operator

@@ -46,7 +46,7 @@ public:
     // extra methods
 
     // pure virtual
-    virtual void printDetails() = 0;
+    virtual void printDetails(ostream &) = 0;
 
     // overloading operator
 
