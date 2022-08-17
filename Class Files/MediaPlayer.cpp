@@ -2,7 +2,7 @@
 // Created by Velasco on 8/17/2022.
 //
 
-#include "MediaPlayer.h"
+#include "../Class Headers/MediaPlayer.h"
 
 
 // overloading operator

@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "Developer.h"
-#include "AppData.h"
-#include "Game.h"
+#include "Class Headers/Developer.h"
+#include "Class Headers/AppData.h"
+#include "Class Headers/Game.h"
 
 using namespace std;
 
@@ -88,7 +88,7 @@ int main() {
             exit(EXIT_FAILURE);
         }
     }
-    
+
     // overload demonstration <<
     cout << appData;
 

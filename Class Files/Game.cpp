@@ -2,7 +2,7 @@
 // Created by Velasco on 8/17/2022.
 //
 
-#include "Game.h"
+#include "../Class Headers/Game.h"
 
 // constructor
 

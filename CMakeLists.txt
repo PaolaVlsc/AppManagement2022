@@ -3,4 +3,4 @@ project(AppManagement2022)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(AppManagement2022 main.cpp Developer.cpp Developer.h TypeFile.cpp TypeFile.h Game.cpp Game.h MediaPlayer.cpp MediaPlayer.h Application.cpp Application.h AppData.cpp AppData.h)
+add_executable(AppManagement2022 main.cpp "Class Files/Developer.cpp" "Class Headers/Developer.h" "Class Files/TypeFile.cpp" "Class Headers/TypeFile.h" "Class Files/Game.cpp" "Class Headers/Game.h" "Class Files/MediaPlayer.cpp" "Class Headers/MediaPlayer.h" "Class Files/Application.cpp" "Class Headers/Application.h" "Class Files/AppData.cpp" "Class Headers/AppData.h")
