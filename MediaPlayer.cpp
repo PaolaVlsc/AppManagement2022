@@ -12,6 +12,7 @@ MediaPlayer::MediaPlayer(const char *code, const string &title, Developer *devel
 
 // copy constructor
 MediaPlayer::MediaPlayer(const MediaPlayer &copy) : Application(copy) {
+    this->typeFileList = copy.typeFileList;
 
 }
 

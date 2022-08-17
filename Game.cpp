@@ -13,6 +13,8 @@ Game::Game(const char *code, const string &title, Developer *developer, const st
 
 
 Game::Game(const Game &copy) : Application(copy) {
+    this->category = copy.category;
+    this->isOnline = copy.isOnline;
 
 }
 
