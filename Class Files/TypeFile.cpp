@@ -16,3 +16,9 @@ void TypeFile::setNameType(const string &nameType) {
     TypeFile::nameType = nameType;
 }
 
+bool TypeFile::operator==(const TypeFile &typeFile) {
+    if (this->getNameType() == typeFile.getNameType())
+        return true;
+    return false;
+}
+

@@ -3,7 +3,9 @@
 //
 
 #include "../Class Headers/MediaPlayer.h"
+#include <iostream>
 
+using namespace std;
 
 // overloading operator
 ostream &operator<<(ostream &, const list<TypeFile *> &);
@@ -48,9 +50,27 @@ void MediaPlayer::printDetails(ostream &stream) {
            "\tSupported File Types: " << this->typeFileList << std::endl;
 }
 
+#include <algorithm>
+
 // έλεγχος αν υποστηρίζει το συγκεκριμένο μορφότυπο
-bool MediaPlayer::hasTypeFile(TypeFile &) {
+bool MediaPlayer::hasTypeFile(TypeFile &typeFile) {
+    cout << "naie" << endl;
+    list <TypeFile *>::iterator it;
+    for (it = typeFileList.begin (); it != typeFileList.end (); it++){
+        if (*it == &typeFile){
+            cout << "xxxx" << endl;
+            return true;
+        }
+    }
+
     return false;
+
+
+// cout << "Im here" << endl;
+//    bool flag = find(typeFileList.begin(), typeFileList.end(), &typeFile) != typeFileList.end();
+//
+//    cout << flag << endl;
+//    return flag;
 }
 
 

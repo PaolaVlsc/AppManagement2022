@@ -1,6 +1,7 @@
 //
 // Created by Velasco on 8/17/2022.
 //
+#include <iostream>
 
 #include "../Class Headers/AppData.h"
 // constructor
@@ -62,9 +63,11 @@ list<MediaPlayer *> AppData::supportedTypeFileList(TypeFile &typeFile) {
         mediaPlayerApp = dynamic_cast<MediaPlayer *>(each);
         // αν επιτρέπεται η μετατροπή
         if (mediaPlayerApp != nullptr) {
+            std::cout << "yes";
             // χρήση μεθόδου αν υπάρχει το typeFile
             if (mediaPlayerApp->hasTypeFile(typeFile)) {
                 // προσθήκη εφαρμογής στη λίστα
+                std::cout << "no";
                 listOfSupportedTypeFiles.push_back(mediaPlayerApp);
             }
         }

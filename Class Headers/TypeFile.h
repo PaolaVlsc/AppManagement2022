@@ -25,6 +25,7 @@ public:
     const string &getNameType() const;
 
     // extra methods
+    bool operator==(const TypeFile &);
 };
 
 

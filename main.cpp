@@ -4,6 +4,7 @@
 #include "Class Headers/Developer.h"
 #include "Class Headers/AppData.h"
 #include "Class Headers/Game.h"
+#include "Class Headers/TypeFile.h"
 
 using namespace std;
 
@@ -12,7 +13,17 @@ void exportToFileDevelopers(const string &, const AppData &);
 
 ostream &operator<<(ostream &, const AppData &);
 
+ostream &operator<<(ostream &, const list<MediaPlayer *> &);
+
 int main() {
+    cout << "HEKAJSHFDIOAUJDFAODJAOFJAOFASOFJAOFA" << endl;
+
+    TypeFile typeFile1(".ok");
+    TypeFile typeFile2(".ok");
+
+    if( typeFile1 == typeFile2)
+        cout << "Ehh";
+
 
     // δημιουργία λίστων για typeFiles
     list<TypeFile *> typeFileList01;
@@ -92,6 +103,13 @@ int main() {
     // overload demonstration <<
     cout << appData;
 
+
+    // επιστρέφει τη λίστα των MediaPlayer εφαρμογών που υποστηρίζουν συγκεκριμένο μορφότυπο
+    list<MediaPlayer *> listOfSupportedTypeFiles;
+    TypeFile typeFile03(".jpeg");
+    listOfSupportedTypeFiles = appData.supportedTypeFileList(typeFile03);
+    cout << listOfSupportedTypeFiles;
+
     return 0;
 }
 
@@ -136,5 +154,13 @@ ostream &operator<<(ostream &stream, const AppData &appData) {
         }
     }
 
+    return stream;
+}
+
+// γράφει σε κανάλι εξόδου όλα τα χαρακτηριστικά των εφαρμογών (games & mediaplayer)
+ostream &operator<<(ostream &stream, const list<MediaPlayer *> &mediaPlayerList) {
+    for (MediaPlayer *each: mediaPlayerList) {
+        stream << "Supported title: "  << each->getTitle() << endl;
+    }
     return stream;
 }
