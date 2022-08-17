@@ -4,6 +4,10 @@
 
 #include "TypeFile.h"
 
+TypeFile::TypeFile(const string &name) {
+    this->nameType = name;
+}
+
 const string &TypeFile::getNameType() const {
     return nameType;
 }
@@ -11,3 +15,4 @@ const string &TypeFile::getNameType() const {
 void TypeFile::setNameType(const string &nameType) {
     TypeFile::nameType = nameType;
 }
+

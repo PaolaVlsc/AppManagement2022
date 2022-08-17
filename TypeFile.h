@@ -13,8 +13,8 @@ class TypeFile {
 private:
     string nameType;
 public:
-
     // constructor
+    TypeFile(const string &);
     // copy constructor
     // destructor
 
