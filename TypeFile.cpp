@@ -3,3 +3,11 @@
 //
 
 #include "TypeFile.h"
+
+const string &TypeFile::getNameType() const {
+    return nameType;
+}
+
+void TypeFile::setNameType(const string &nameType) {
+    TypeFile::nameType = nameType;
+}
