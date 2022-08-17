@@ -1,0 +1,14 @@
+//
+// Created by Velasco on 8/17/2022.
+//
+
+#ifndef APPMANAGEMENT2022_APPLICATION_H
+#define APPMANAGEMENT2022_APPLICATION_H
+
+
+class Application {
+
+};
+
+
+#endif //APPMANAGEMENT2022_APPLICATION_H

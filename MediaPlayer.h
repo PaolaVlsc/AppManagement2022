@@ -1,0 +1,14 @@
+//
+// Created by Velasco on 8/17/2022.
+//
+
+#ifndef APPMANAGEMENT2022_MEDIAPLAYER_H
+#define APPMANAGEMENT2022_MEDIAPLAYER_H
+
+
+class MediaPlayer {
+
+};
+
+
+#endif //APPMANAGEMENT2022_MEDIAPLAYER_H
