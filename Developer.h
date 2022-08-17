@@ -7,7 +7,9 @@
 
 
 #include <string>
+#include <iostream>
 
+using std::ostream;
 using std::string;
 
 class Developer {
@@ -38,7 +40,9 @@ public:
     const string &getName() const;
 
     const string &getEmail() const;
+
     // extra methods
+    void print(ostream &);
 };
 
 

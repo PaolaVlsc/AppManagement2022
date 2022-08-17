@@ -83,6 +83,11 @@ const string &Developer::getEmail() const {
     return email;
 }
 
+void Developer::print(ostream &output) {
+    output << "Code: " << code << ", "
+           << "Name: " << name << ", "
+           << "Email: " << email << ";" << endl;
+}
 
 // extra methods
 

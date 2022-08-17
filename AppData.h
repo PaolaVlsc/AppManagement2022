@@ -7,6 +7,8 @@
 
 
 #include "Application.h"
+#include "TypeFile.h"
+#include "MediaPlayer.h"
 
 #include <list>
 
@@ -18,11 +20,14 @@ private:
     list<Developer *> developerList;
 public:
     // constructor
-    AppData(const list<Application *> &applicationList, const list<Developer *> &developerList);
+    // use default
+
     // copy constructor
-    AppData(const AppData &);
+    // use default
+
     // destructor
-    virtual ~AppData();
+    // use default
+
     // setters
     void setApplicationList(const list<Application *> &applicationList);
 
@@ -33,20 +38,19 @@ public:
 
     const list<Developer *> &getDeveloperList() const;
 
-// extra methods
+    /********* extra methods **********/
 
-// add app on the list
+    // add app on the list
+    void addApp(Application &);
 
-// remove app on the list
+    // remove app on the list
+    void removeApp(Application &);
 
+    // add developer on the list
+    void addDev(Developer &);
 
-// add developer on the list
-
-// επιστρέφει τη λίστα των MediaPlayer εφαρμογών που υποστηρίζουν συγκεκριμένο μορφότυπο
-
-
+    // επιστρέφει τη λίστα των MediaPlayer εφαρμογών που υποστηρίζουν συγκεκριμένο μορφότυπο
+    list<MediaPlayer *> supportedTypeFileList(TypeFile &);
 };
-
-
 
 #endif //APPMANAGEMENT2022_APPDATA_H

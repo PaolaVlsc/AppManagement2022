@@ -38,4 +38,12 @@ const list<TypeFile *> &MediaPlayer::getTypeFileList() const {
 void MediaPlayer::printDetails() {
 
 }
+
+// έλεγχος αν υποστηρίζει το συγκεκριμένο μορφότυπο
+bool MediaPlayer::hasTypeFile(TypeFile &) {
+    return false;
+}
+
+
+
 // overloading operator

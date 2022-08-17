@@ -20,10 +20,13 @@ private:
 public:
     // constructor
     MediaPlayer(const char *code, const string &title, Developer *developer, const list<TypeFile *> &typeFileList);
+
     // copy constructor
     MediaPlayer(const MediaPlayer &);
+
     // destructor
     ~MediaPlayer() override;
+
     // setters
     void setTypeFileList(const list<TypeFile *> &typeFileList);
     // getters
@@ -31,7 +34,10 @@ public:
     const list<TypeFile *> &getTypeFileList() const;
 
     void printDetails() override;
+
     // extra methods
+    // Έλεγχος αν έχει αυτό το μάθημα
+    bool hasTypeFile(TypeFile &);
     // overloading operator
 };
 
