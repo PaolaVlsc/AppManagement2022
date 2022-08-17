@@ -29,6 +29,8 @@ public:
     // getters
 
     const list<TypeFile *> &getTypeFileList() const;
+
+    void printDetails() override;
     // extra methods
     // overloading operator
 };

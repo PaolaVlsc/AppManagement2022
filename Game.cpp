@@ -44,4 +44,7 @@ bool Game::getIsOnline() const {
 }
 
 // extra methods
+void Game::printDetails() {
+
+}
 // overloading operator

@@ -35,4 +35,7 @@ const list<TypeFile *> &MediaPlayer::getTypeFileList() const {
 }
 
 // extra methods
+void MediaPlayer::printDetails() {
+
+}
 // overloading operator

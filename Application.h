@@ -45,6 +45,9 @@ public:
 
     // extra methods
 
+    // pure virtual
+    virtual void printDetails() = 0;
+
     // overloading operator
 
 };

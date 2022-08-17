@@ -30,6 +30,8 @@ public:
     const string &getCategory() const;
     bool getIsOnline() const;
 
+    void printDetails() override;
+
     // extra methods
     // overloading operator
 };

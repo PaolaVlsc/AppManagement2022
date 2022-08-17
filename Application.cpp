@@ -86,4 +86,5 @@ Developer *Application::getDeveloper() const {
 }
 
 // extra methods
+
 // overloading operator
