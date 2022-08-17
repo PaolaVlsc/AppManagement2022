@@ -13,13 +13,13 @@ using std::string;
 
 class Application {
 private:
-    const char *code;
+    char *code;
     string title;
     Developer *developer;
 
 public:
     // constructor
-    Application(const char *code, const string &title, Developer *developer);
+    Application(const char *, const string &, Developer *);
 
     // copy constructor
     Application(const Application &);

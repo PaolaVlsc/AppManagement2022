@@ -3,14 +3,43 @@
 //
 
 #include "Application.h"
+#include <cstring>
+#include <string>
+#include <iostream>
 
+using namespace std;
 
 // constructor
-Application::Application(const char *code, const string &title, Developer *developer) : code(code), title(title),
-                                                                                        developer(developer) {}
+Application::Application(const char *code, const string &title, Developer *developer) : title(title),
+                                                                                        developer(developer) {
+    //code
+    try {
+        this->code = new char[strlen(code) + 1];
+    }
+    catch (std::bad_alloc &exception) {
+        cout << exception.what() << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    strncpy(this->code, code, strlen(code) + 1);
+
+}
 
 // copy constructor
-Application::Application(const Application &) {
+Application::Application(const Application &copy) {
+    //code
+    try {
+        this->code = new char[strlen(copy.code) + 1];
+    }
+    catch (std::bad_alloc &exception) {
+        cout << exception.what() << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    strncpy(this->code, copy.code, strlen(copy.code) + 1);
+
+    this->title = copy.title;
+    this->developer = copy.developer;
 
 }
 
@@ -19,11 +48,20 @@ Application::Application(const Application &) {
 
 Application::~Application() {
 
+    delete[]this->code;
 }
 
 // setters
 void Application::setCode(const char *code) {
-    Application::code = code;
+    delete[] this->code;
+    try {
+        this->code = new char[strlen(code) + 1];
+    }
+    catch (std::bad_alloc &exception) {
+        cout << exception.what() << endl;
+        exit(EXIT_FAILURE);
+    }
+    strncpy(this->code, code, strlen(code) + 1);
 }
 
 void Application::setTitle(const string &title) {
@@ -36,15 +74,16 @@ void Application::setDeveloper(Developer *developer) {
 
 // getters
 const char *Application::getCode() const {
-    return code;
+    return this->code;
 }
 
 const string &Application::getTitle() const {
-    return title;
+    return this->title;
 }
 
 Developer *Application::getDeveloper() const {
-    return developer;
+    return this->developer;
 }
+
 // extra methods
 // overloading operator

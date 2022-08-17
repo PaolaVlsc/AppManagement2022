@@ -8,7 +8,6 @@
 #include <iostream>
 
 using namespace std;
-using namespace std;
 
 // constructor
 Developer::Developer(const char *code, const string &name, const string &email) : name(name),

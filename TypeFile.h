@@ -28,17 +28,6 @@ public:
 };
 
 
-// constructor
-
-// copy constructor
-
-// destructor
-
-// setters
-
-// getters
-// extra methods
-// overloading operator
 
 
 
