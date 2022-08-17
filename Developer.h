@@ -12,7 +12,7 @@ using std::string;
 
 class Developer {
 private:
-    const char *code;
+    char *code;
     string name;
     string email;
 public:

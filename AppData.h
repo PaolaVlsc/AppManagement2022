@@ -34,8 +34,19 @@ public:
     const list<Developer *> &getDeveloperList() const;
 
 // extra methods
+
+// add app on the list
+
+// remove app on the list
+
+
+// add developer on the list
+
+// επιστρέφει τη λίστα των MediaPlayer εφαρμογών που υποστηρίζουν συγκεκριμένο μορφότυπο
+
+
 };
 
-// overloading operator
+
 
 #endif //APPMANAGEMENT2022_APPDATA_H
