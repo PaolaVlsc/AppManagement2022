@@ -27,7 +27,6 @@ public:
     // extra methods
 };
 
-// overloading operator
 
 // constructor
 
@@ -39,5 +38,8 @@ public:
 
 // getters
 // extra methods
+// overloading operator
+
+
 
 #endif //APPMANAGEMENT2022_TYPEFILE_H

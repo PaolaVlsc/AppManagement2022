@@ -6,7 +6,46 @@
 #define APPMANAGEMENT2022_APPLICATION_H
 
 
+#include "Developer.h"
+#include <string>
+
+using std::string;
+
 class Application {
+private:
+    const char *code;
+    string title;
+    Developer *developer;
+
+public:
+    // constructor
+    Application(const char *code, const string &title, Developer *developer);
+
+    // copy constructor
+    Application(const Application &);
+
+    // destructor
+    virtual ~Application();
+
+    // setters
+
+    void setCode(const char *code);
+
+    void setTitle(const string &title);
+
+
+    void setDeveloper(Developer *developer);
+
+    // getters
+    const char *getCode() const;
+
+    const string &getTitle() const;
+
+    Developer *getDeveloper() const;
+
+    // extra methods
+
+    // overloading operator
 
 };
 
