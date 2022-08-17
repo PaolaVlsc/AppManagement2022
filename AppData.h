@@ -6,9 +6,36 @@
 #define APPMANAGEMENT2022_APPDATA_H
 
 
-class AppData {
+#include "Application.h"
 
+#include <list>
+
+using std::list;
+
+class AppData {
+private:
+    list<Application *> applicationList;
+    list<Developer *> developerList;
+public:
+    // constructor
+    AppData(const list<Application *> &applicationList, const list<Developer *> &developerList);
+    // copy constructor
+    AppData(const AppData &);
+    // destructor
+    virtual ~AppData();
+    // setters
+    void setApplicationList(const list<Application *> &applicationList);
+
+    void setDeveloperList(const list<Developer *> &developerList);
+    // getters
+
+    const list<Application *> &getApplicationList() const;
+
+    const list<Developer *> &getDeveloperList() const;
+
+// extra methods
 };
 
+// overloading operator
 
 #endif //APPMANAGEMENT2022_APPDATA_H
