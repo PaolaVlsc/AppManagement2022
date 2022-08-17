@@ -2,25 +2,25 @@
 // Created by Velasco on 8/17/2022.
 //
 
-#ifndef APPMANAGEMENT2022_GAMES_H
-#define APPMANAGEMENT2022_GAMES_H
+#ifndef APPMANAGEMENT2022_GAME_H
+#define APPMANAGEMENT2022_GAME_H
 
 
 #include "Application.h"
 
-class Games : public Application {
+class Game : public Application {
 private:
     string category;
     bool isOnline;
 public:
     // constructor
-    Games(const char *code, const string &title, Developer *developer, const string &category, bool isOnline);
+    Game(const char *code, const string &title, Developer *developer, const string &category, bool isOnline);
 
     // copy constructor
-    Games(const Games &);
+    Game(const Game &);
 
     // destructor
-    ~Games() override;
+    ~Game() override;
 
     // setters
     void setCategory(const string &category);
@@ -35,4 +35,4 @@ public:
 };
 
 
-#endif //APPMANAGEMENT2022_GAMES_H
+#endif //APPMANAGEMENT2022_GAME_H
