@@ -88,7 +88,7 @@ const string &Developer::getEmail() const {
 void Developer::print(ostream &output) {
     output << "Code: " << code << ", "
            << "Name: " << name << ", "
-           << "Email: " << email << ";" << endl;
+           << "Email: " << email << ";" << endl << endl;
 }
 
 // overloading

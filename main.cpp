@@ -16,12 +16,11 @@ ostream &operator<<(ostream &, const AppData &);
 ostream &operator<<(ostream &, const list<MediaPlayer *> &);
 
 int main() {
-    cout << "HEKAJSHFDIOAUJDFAODJAOFJAOFASOFJAOFA" << endl;
 
     TypeFile typeFile1(".ok");
     TypeFile typeFile2(".ok");
 
-    if( typeFile1 == typeFile2)
+    if (typeFile1 == typeFile2)
         cout << "Ehh";
 
 
@@ -88,6 +87,7 @@ int main() {
     appData.addApp(*mediaPlayer05);
     appData.addApp(*mediaPlayer06);
 
+    appData.removeApp(mediaPlayer01);
 
     // write to file
     string fileName = "test.txt";
@@ -107,7 +107,7 @@ int main() {
     // επιστρέφει τη λίστα των MediaPlayer εφαρμογών που υποστηρίζουν συγκεκριμένο μορφότυπο
     list<MediaPlayer *> listOfSupportedTypeFiles;
     TypeFile typeFile03(".jpeg");
-    listOfSupportedTypeFiles = appData.supportedTypeFileList(typeFile03);
+    listOfSupportedTypeFiles = appData.supportedTypeFileList(&typeFile03);
     cout << listOfSupportedTypeFiles;
 
     return 0;
@@ -160,7 +160,7 @@ ostream &operator<<(ostream &stream, const AppData &appData) {
 // γράφει σε κανάλι εξόδου όλα τα χαρακτηριστικά των εφαρμογών (games & mediaplayer)
 ostream &operator<<(ostream &stream, const list<MediaPlayer *> &mediaPlayerList) {
     for (MediaPlayer *each: mediaPlayerList) {
-        stream << "Supported title: "  << each->getTitle() << endl;
+        stream << "Supported title: " << each->getTitle() << endl;
     }
     return stream;
 }

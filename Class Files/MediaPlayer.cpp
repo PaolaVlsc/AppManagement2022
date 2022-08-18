@@ -42,29 +42,26 @@ const list<TypeFile *> &MediaPlayer::getTypeFileList() const {
 
 void MediaPlayer::printDetails(ostream &stream) {
     stream << "Code: " << getCode() <<
-           "\tTitle: " << getTitle() <<
-           "\tDeveloper details: " << std::endl <<
-           "Code: " << getDeveloper()->getCode() <<
+           "\tTitle: " << getTitle() << std::endl <<
+           "Developer details: " << std::endl <<
+           "\tCode: " << getDeveloper()->getCode() <<
            "\tName: " << getDeveloper()->getName() <<
-           "\tEmail: " << getDeveloper()->getEmail() <<
-           "\tSupported File Types: " << this->typeFileList << std::endl;
+           "\tEmail: " << getDeveloper()->getEmail() << std::endl <<
+           "Supported File Types: " << this->typeFileList << std::endl << std::endl;
 }
 
 #include <algorithm>
 
 // έλεγχος αν υποστηρίζει το συγκεκριμένο μορφότυπο
-bool MediaPlayer::hasTypeFile(TypeFile &typeFile) {
-    cout << "naie" << endl;
-    list <TypeFile *>::iterator it;
-    for (it = typeFileList.begin (); it != typeFileList.end (); it++){
-        if (*it == &typeFile){
-            cout << "xxxx" << endl;
+bool MediaPlayer::hasTypeFile(TypeFile *typeFile) {
+    list<TypeFile *>::iterator it;
+    for (it = typeFileList.begin(); it != typeFileList.end(); it++) {
+        if (*it == typeFile) {
+            cout << "hey";
             return true;
         }
     }
-
     return false;
-
 
 // cout << "Im here" << endl;
 //    bool flag = find(typeFileList.begin(), typeFileList.end(), &typeFile) != typeFileList.end();

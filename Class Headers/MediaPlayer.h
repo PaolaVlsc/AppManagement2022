@@ -38,7 +38,7 @@ public:
 
     // extra methods
     // Έλεγχος αν έχει αυτό το μάθημα
-    bool hasTypeFile(TypeFile &);
+    bool hasTypeFile(TypeFile *);
 
     // overloading operator
 };

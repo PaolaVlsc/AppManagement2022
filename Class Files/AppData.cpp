@@ -42,8 +42,8 @@ void AppData::addApp(Application &application) {
 }
 
 // remove app on the list
-void AppData::removeApp(Application &application) {
-// FIXME 1: remove ( check if the list has the application or not )
+void AppData::removeApp(Application *application) {
+    this->applicationList.remove(application);
 }
 
 // add developer on the list
@@ -54,7 +54,7 @@ void AppData::addDev(Developer &developer) {
 }
 
 // επιστρέφει τη λίστα των MediaPlayer εφαρμογών που υποστηρίζουν συγκεκριμένο μορφότυπο
-list<MediaPlayer *> AppData::supportedTypeFileList(TypeFile &typeFile) {
+list<MediaPlayer *> AppData::supportedTypeFileList(TypeFile *typeFile) {
     list<MediaPlayer *> listOfSupportedTypeFiles;
 
     // διαχωρισμός των εφαρμογών από τη λίστα applicationList
@@ -63,11 +63,11 @@ list<MediaPlayer *> AppData::supportedTypeFileList(TypeFile &typeFile) {
         mediaPlayerApp = dynamic_cast<MediaPlayer *>(each);
         // αν επιτρέπεται η μετατροπή
         if (mediaPlayerApp != nullptr) {
-            std::cout << "yes";
+
             // χρήση μεθόδου αν υπάρχει το typeFile
             if (mediaPlayerApp->hasTypeFile(typeFile)) {
                 // προσθήκη εφαρμογής στη λίστα
-                std::cout << "no";
+
                 listOfSupportedTypeFiles.push_back(mediaPlayerApp);
             }
         }

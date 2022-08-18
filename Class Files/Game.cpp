@@ -49,10 +49,10 @@ void Game::printDetails(ostream &stream) {
     stream << "Code: " << getCode() <<
            "\tTitle: " << getTitle() <<
            "\tCategory: " << this->category <<
-           "\tOnline: " << this->isOnline <<
-           "\tDeveloper details: " << std::endl <<
-           "Code: " << getDeveloper()->getCode() <<
+           "\tOnline: " << this->isOnline << std::endl <<
+           "Developer details: " << std::endl <<
+           "\tCode: " << getDeveloper()->getCode() <<
            "\tName: " << getDeveloper()->getName() <<
-           "\tEmail: " << getDeveloper()->getEmail() << std::endl;
+           "\tEmail: " << getDeveloper()->getEmail() << std::endl << std::endl;
 }
 // overloading operator

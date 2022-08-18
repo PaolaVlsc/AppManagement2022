@@ -44,13 +44,13 @@ public:
     void addApp(Application &);
 
     // remove app on the list
-    void removeApp(Application &);
+    void removeApp(Application *);
 
     // add developer on the list
     void addDev(Developer &);
 
     // επιστρέφει τη λίστα των MediaPlayer εφαρμογών που υποστηρίζουν συγκεκριμένο μορφότυπο
-    list<MediaPlayer *> supportedTypeFileList(TypeFile &);
+    list<MediaPlayer *> supportedTypeFileList(TypeFile *);
 };
 
 #endif //APPMANAGEMENT2022_APPDATA_H
