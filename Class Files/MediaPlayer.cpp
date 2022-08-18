@@ -54,6 +54,8 @@ void MediaPlayer::printDetails(ostream &stream) {
 
 // έλεγχος αν υποστηρίζει το συγκεκριμένο μορφότυπο
 bool MediaPlayer::hasTypeFile(TypeFile *typeFile) {
+
+    // FIXME 1: Not working ??? 
     list<TypeFile *>::iterator it;
     for (it = typeFileList.begin(); it != typeFileList.end(); it++) {
         if (*it == typeFile) {
